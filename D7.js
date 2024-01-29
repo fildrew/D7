@@ -14,7 +14,7 @@ console.log(concatenazione("Car,Brand"));
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 const generateRandomArray = function () {
-const randomArray =[];
+const randomArray = [];
 
   for (let i = 0; i < 10; i++) {
     const randomValue = Math.floor(Math.random()*101);
@@ -30,9 +30,7 @@ console.log(myArray),
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
-
-const numbers = [1,2,3,4,5,6,7,8,9,10];
-
+let ; numbers = [1,2,3,4,5,6];
 function evenNumbers(array) {
   return array.filter(i => i % 2 === 0);
 };
