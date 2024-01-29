@@ -36,6 +36,7 @@ console.log(myArray);
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 const numbers = [1,2,3,4,5,6,7];
+
 function evenNumbers(array) {
   return array.filter(i => i % 2 === 0);
 };
@@ -46,7 +47,7 @@ console.log(numbers);
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 const SumArray = function (array) {
-  let sum =0;
+  let sum = 0;
 
   array.forEach(function (elements) {
     sum += elements;
@@ -224,14 +225,19 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
-function oldest(array) {
-  const oldFilm = array[0].Title;
-  const oldFilmDate = parseInt(array[0].Year);
-  array.forEach ( i=> {oldFilmDate > parseInt(i.Year) ? oldFilm = i.Title : oldFilm = oldFilm });
-  return oldFilm;
-}
+const findOldestMovie = function () {
+  let oldestMovie = movies[0];
+  for (let i = 1; i < movies.length; i++) {
+    if (movies[i].Year < oldestMovie.Year) {
+      oldestMovie = movies[i];
+    }
+  }
+  return oldestMovie;
+};
 
-console.log(oldest(movies));
+let oldestMovie = findOldestMovie();
+console.log(oldestMovie);
+
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
@@ -272,12 +278,12 @@ function finder(array,id) {
   return array.find (i => i.imdbID === id);
 };
 
-console.log(finder(moives,'tt2395427'));
+console.log(finder(movies,'tt2395427'));
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
 function indexFilm (array, year) {
-  return array.findIndex (i => i.Year === anno);
+  return array.findIndex (i => i.Year === year);
 };
 
 console.log(indexFilm (movies, 2015));
