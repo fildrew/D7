@@ -3,22 +3,66 @@
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
 
+function concatenazione (str1,str2) {
+  let newString;
+  return newString = str1.slice(0,2).concat(str2.slice(-3)).toUpperCase();
+};
+
+console.log(concatenazione("Car,Brand"));
+
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
+const generateRandomArray = function () {
+const randomArray =[];
+
+  for (let i = 0; i < 10; i++) {
+    const randomValue = Math.floor(Math.random()*101);
+    randomArray.push(randomValue);
+  }
+
+  return randomArray;
+};
+
+const myArray = generateRandomArray();
+console.log(myArray),
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
+let numbers = [1,2,3,4,5,6,7,8,9,10];
+
+function evenNumbers(array) {
+   return array.filter(i => i % 2 === 0);
+};
+
+console.log(arrayNumbers);
+
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+const SumArray = function (array) {
+  let sum =0;
+
+  array.forEach(function (elements) {
+    sum += elements;
+    
+  });
+
+  return sum;
+};
+
+const num = [24,14,23,25];
+const totalSum = SumArray(num);
+console.log(totalSum);
+
+
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-
+function
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
