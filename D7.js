@@ -30,12 +30,12 @@ const randomArray = [];
 };
 
 const myArray = generateRandomArray();
-console.log(myArray),
+console.log(myArray);
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
-const ;numbers = [1,2,3,,4,5,6];
+const numbers = [1,2,3,4,5,6,7];
 function evenNumbers(array) {
   return array.filter(i => i % 2 === 0);
 };
