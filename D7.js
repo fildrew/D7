@@ -2,13 +2,18 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
-
-function concatenazione (str1,str2) {
-  let newString;
-  return newString = str1.slice(0,2).concat(str2.slice(-3)).toUpperCase();
+const concatenateStr = function (str1,str2) {
+  const firstTwoCharacters = str1.slice(0,2);
+  const lastThreeCharacters = str2.slice(-3);
+  const concatenatedString = firstTwoCharacters + lastThreeCharacters;
+  const uppercaseStr = concatenatedString.toUpperCase();
+  console.log(uppercaseStr);
 };
 
-console.log(concatenazione("Car,Brand"));
+const string1 = "Car";
+const string2 = "Brand";
+
+concatenateStr(string1,string2);
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
@@ -30,7 +35,7 @@ console.log(myArray),
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
-let ; numbers = [1,2,3,4,5,6];
+const ;numbers = [1,2,3,,4,5,6];
 function evenNumbers(array) {
   return array.filter(i => i % 2 === 0);
 };
