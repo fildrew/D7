@@ -37,7 +37,7 @@ function evenNumbers(array) {
    return array.filter(i => i % 2 === 0);
 };
 
-console.log(arrayNumbers);
+console.log(numbers);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -53,8 +53,7 @@ const SumArray = function (array) {
   return sum;
 };
 
-const num = [24,14,23,25];
-const totalSum = SumArray(num);
+const totalSum = SumArray(numbers);
 console.log(totalSum);
 
 
@@ -62,10 +61,19 @@ console.log(totalSum);
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-function
+function sumRed (array) {
+  return array.reduce((a,i) => a+i , 0);
+};
+console.log(sumRed(numbers));
+
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+function addNumber(array,value) {
+  return array.map(i => i + value);
+};
+console.log(addNumber(numbers,5));
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
