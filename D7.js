@@ -306,20 +306,23 @@ console.log(millenial(movies));
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+const summAllTheYears = arr => arr.reduce(accumulator , currentValue) => (accumulator + parseInt(currentValue.Year),0);
+console.log(summAllTheYears(movies));
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 function finder(array, id) {
-  return array.find((i) => i.imdbID === id);
+  return array.find((movie) => i.imdbID === id);
 }
 
 console.log(finder(movies, "tt2395427"));
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
 function indexFilm(array, year) {
-  return array.findIndex((i) => i.Year === year);
+  return array.findIndex((movie) => i.Year === year);
 }
 
 console.log(indexFilm(movies, 2015));
