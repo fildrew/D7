@@ -107,7 +107,7 @@ console.log(oddNumbers());
 function getOdds(){
   const arr = [];
   for (let i = 1; i <= 99 ; i += 2){
-    arr.push(i),
+    arr.push(i);
   }
   return arr;
 }
